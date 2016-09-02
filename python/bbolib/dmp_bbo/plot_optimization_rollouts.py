@@ -3,7 +3,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-from dmp_bbo_plotting import plotOptimizationRollouts
+from .dmp_bbo_plotting import plotOptimizationRollouts
 
 if __name__=='__main__':
     

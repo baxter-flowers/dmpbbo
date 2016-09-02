@@ -2,11 +2,8 @@ import os
 import sys
 import numpy as np
 
-lib_path = os.path.abspath('../../../python/')
-sys.path.append(lib_path)
-
-from dmp_bbo.task_solver import TaskSolver
-from dmp_bbo.rollout import Rollout, saveRolloutsToDirectory
+from bbolib.dmp_bbo.task_solver import TaskSolver
+from bbolib.dmp_bbo.rollout import Rollout, saveRolloutsToDirectory
 
 class DemoTaskSolverApproximateQuadraticFunction(TaskSolver):
     """The task solver tunes the parameters a and c such that the function \f$ y = a*x^2 + c \f$ best matches a set of target values y_target for a set of input values x"""

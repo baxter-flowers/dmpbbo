@@ -2,8 +2,8 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-from bbo_plotting import plotLearningCurve, plotExplorationCurve
-from bbo_plotting import loadLearningCurve, loadExplorationCurve
+from .bbo_plotting import plotLearningCurve, plotExplorationCurve
+from .bbo_plotting import loadLearningCurve, loadExplorationCurve
 
 if __name__=='__main__':
     

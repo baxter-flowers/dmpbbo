@@ -4,15 +4,11 @@ import os
 import sys
 import matplotlib.pyplot as plt
 
-lib_path = os.path.abspath('../../python/')
-sys.path.append(lib_path)
+from ..bbo.bbo_plotting import plotUpdate, plotExplorationCurve, plotLearningCurve 
+from ..bbo.bbo_plotting import saveUpdate, saveExplorationCurve, saveLearningCurve
 
-
-from bbo.bbo_plotting import plotUpdate, plotExplorationCurve, plotLearningCurve 
-from bbo.bbo_plotting import saveUpdate, saveExplorationCurve, saveLearningCurve
-
-from dmp_bbo.dmp_bbo_plotting import saveUpdateRollouts, setColor
-from dmp_bbo.rollout import Rollout
+from .dmp_bbo_plotting import saveUpdateRollouts, setColor
+from .rollout import Rollout
   
   
 def runOptimizationTask(task, task_solver, initial_distribution, updater, n_updates, n_samples_per_update,fig=None,directory=None):

@@ -2,16 +2,12 @@ import os
 import sys
 import numpy as np
 
-lib_path = os.path.abspath('../../../python/')
-sys.path.append(lib_path)
+from bbolib.bbo.distribution_gaussian import DistributionGaussian
+from bbolib.bbo.updater import UpdaterCovarDecay
 
-
-from bbo.distribution_gaussian import DistributionGaussian
-from bbo.updater import UpdaterCovarDecay
-
-from dmp_bbo.run_optimization_task import runOptimizationTask
-from dmp_bbo.task import Task
-from dmp_bbo.task_solver import TaskSolver
+from bbolib.dmp_bbo.run_optimization_task import runOptimizationTask
+from bbolib.dmp_bbo.task import Task
+from bbolib.dmp_bbo.task_solver import TaskSolver
 
 def quadraticFunction(a, c, inputs):
     """ Target function \f$ y = a*x^2 + c \f$
@@ -27,9 +23,7 @@ def quadraticFunction(a, c, inputs):
 
 class DemoTaskApproximateQuadraticFunction(Task):
     """
-    The task is to choose the parameters a and c such that the function \f$ y = lib_path = os.path.abspath('../')
-sys.path.append(lib_path)
-a*x^2 + c \f$ best matches a set of target values y_target for a set of input values x
+    The task is to choose the parameters a and c such that the function \f$ y = a*x^2 + c \f$ best matches a set of target values y_target for a set of input values x
     """
 
     def __init__(self, a, c, inputs, regularization_weight=0.1):

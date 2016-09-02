@@ -3,21 +3,16 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-lib_path = os.path.abspath('../../../python')
-sys.path.append(lib_path)
+from bbolib.bbo.distribution_gaussian import DistributionGaussian
+from bbolib.bbo.updater import UpdaterCovarDecay
+from bbolib.dmp_bbo.task import Task
 
-from bbo.distribution_gaussian import DistributionGaussian
-from bbo.updater import UpdaterCovarDecay
-from dmp_bbo.task import Task
-
-from dmp_bbo.run_one_update import runOptimizationTaskOneUpdate
-from dmp_bbo.dmp_bbo_plotting import plotOptimizationRollouts
+from bbolib.dmp_bbo.run_one_update import runOptimizationTaskOneUpdate
+from bbolib.dmp_bbo.dmp_bbo_plotting import plotOptimizationRollouts
 
 class DemoTaskApproximateQuadraticFunction(Task):
     """
-    The task is to choose the parameters a and c such that the function \f$ y = lib_path = os.path.abspath('../')
-sys.path.append(lib_path)
-a*x^2 + c \f$ best matches a set of target values y_target for a set of input values x
+    The task is to choose the parameters a and c such that the function \f$ y = a*x^2 + c \f$ best matches a set of target values y_target for a set of input values x
     """
 
     def __init__(self, a, c, inputs, regularization_weight=0.1):

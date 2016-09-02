@@ -5,10 +5,7 @@ from pylab import mean
 
 from matplotlib.patches import Ellipse
 
-lib_path = os.path.abspath('../../python/')
-sys.path.append(lib_path)
-
-from bbo.distribution_gaussian import DistributionGaussian
+from .distribution_gaussian import DistributionGaussian
 
 def setColor(handle,i_update,n_updates):
     if (i_update==0):

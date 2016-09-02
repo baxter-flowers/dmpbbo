@@ -2,10 +2,7 @@ import numpy as np
 import sys
 import os
 
-lib_path = os.path.abspath('../../python/')
-sys.path.append(lib_path)
-
-from bbo.distribution_gaussian import DistributionGaussian
+from ..bbo.distribution_gaussian import DistributionGaussian
 
 class Updater:
     def updateDistribution(distribution, samples, costs):

@@ -5,14 +5,11 @@ import sys
 import pickle
 import inspect
 
-lib_path = os.path.abspath('../../python/')
-sys.path.append(lib_path)
-
-from dmp_bbo.rollout import loadRolloutFromDirectory, loadRolloutsFromDirectory 
-from dmp_bbo.dmp_bbo_plotting import saveUpdateRollouts
-from bbo.distribution_gaussian import DistributionGaussian
-from bbo.distribution_gaussian import loadDistributionGaussianFromDirectory
-from dmp_bbo.task import Task
+from .rollout import loadRolloutFromDirectory, loadRolloutsFromDirectory 
+from .dmp_bbo_plotting import saveUpdateRollouts
+from ..bbo.distribution_gaussian import DistributionGaussian
+from ..bbo.distribution_gaussian import loadDistributionGaussianFromDirectory
+from .task import Task
 
 def prepareOptimization(directory,task,initial_distribution,updater,    n_samples_per_update):
     

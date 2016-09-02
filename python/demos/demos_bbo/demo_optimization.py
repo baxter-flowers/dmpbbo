@@ -2,14 +2,10 @@ import os
 import sys
 import numpy as np
 
-# Add relative path, in case PYTHONPATH is not set
-lib_path = os.path.abspath('../../../python/')
-sys.path.append(lib_path)
-
-from bbo.cost_function import CostFunction
-from bbo.distribution_gaussian import DistributionGaussian
-from bbo.updater import UpdaterCovarDecay
-from bbo.run_optimization import runOptimization
+from bbolib.bbo.cost_function import CostFunction
+from bbolib.bbo.distribution_gaussian import DistributionGaussian
+from bbolib.bbo.updater import UpdaterCovarDecay
+from bbolib.bbo.run_optimization import runOptimization
 
 class DemoCostFunctionDistanceToPoint(CostFunction):
     """ CostFunction in which the distance to a pre-defined point must be minimized."""
