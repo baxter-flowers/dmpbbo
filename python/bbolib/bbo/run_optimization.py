@@ -69,4 +69,4 @@ def runOptimization(cost_function, initial_distribution, updater, n_updates, n_s
         saveExplorationCurve(directory,exploration_curve)
         print('Saved results to "'+directory+'".')
     
-    return learning_curve
+    return distribution.mean, distribution.covar
